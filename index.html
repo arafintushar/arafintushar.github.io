@@ -35,17 +35,17 @@
                             </a>
                         </li>
                         <li class="nav-link">
+                            <a href="#resume">
+                                <i class="fa-solid fa-file nav-link__icon"></i>
+                                <span class="nav-link__name">Resume</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
                             <a href="#portfolio">
                                 <i
                                     class="fa-solid fa-briefcase nav-link__icon"
                                 ></i>
                                 <span class="nav-link__name">Portfolio</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#resume">
-                                <i class="fa-solid fa-file nav-link__icon"></i>
-                                <span class="nav-link__name">Resume</span>
                             </a>
                         </li>
                         <li class="nav-link">
@@ -101,10 +101,10 @@
                         </h1>
                         <h2>web Developer</h2>
                         <div class="btn-group">
-                            <a href="#" class="btn btn-fill"
+                            <a href="#contact" class="btn btn-fill"
                                 >Contact me <i class="fa-solid fa-envelope"></i
                             ></a>
-                            <a href="#" class="btn btn-outline">About me</a>
+                            <a href="#about" class="btn btn-outline">About me</a>
                         </div>
                         <div class="social-links">
                             <ul>
@@ -160,7 +160,7 @@
 
             <section id="about">
                 <div class="container about-sec">
-                    <h2>About</h2>
+                    <h3 class="section-title">About</h3>
                     <div class="about-detail">
                         <!-- left about part -->
                         <div class="left-about">
@@ -173,7 +173,7 @@
                                 necessary to make your project a success.
                             </div>
                             <div class="left-about__cv-btn">
-                                <a href="#" class="btn btn-outline"
+                                <a href="#resume" class="btn btn-outline"
                                     >Download CV
                                     <i class="fa-solid fa-arrow-down"></i></i
                                 ></a>
@@ -183,7 +183,29 @@
 
                         <!-- right about part -->
                         <div class="right-about">
-                            <div class="right-about__name">
+                            <table>
+                                <tr>
+                                    <th>Birthday:</th>
+                                    <td>01/01/2022</td>
+                                </tr>
+                                <tr>
+                                    <th>Age:</th>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <th>Address:</th>
+                                    <td>Dhaka, Bangladesh</td>
+                                </tr>
+                                <tr>
+                                    <th>E-mail:</th>
+                                    <td>mail@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone:</th>
+                                    <td>+8801812345678</td>
+                                </tr>
+                            </table>
+                            <!-- <div class="right-about__name">
                                 <p>Birthday:</p>
                                 <p>Age:</p>
                                 <p>Address:</p>
@@ -196,7 +218,7 @@
                                 <p>Dhaka, Bangladesh</p>
                                 <p>mail@gmail.com</p>
                                 <p>+8801812345678</p>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- end of right about part -->
                     </div>
@@ -204,6 +226,52 @@
             </section>
 
             <!---------------- end of about section ------------------------->
+
+            <!---------------- resume section ------------------------------->
+
+            <section id="resume">
+                <div class="container resume-sec">
+                    <h3 class="section-title">Resume</h3>
+                    <div class="my-resume">
+                        <div class="my-education">
+                            <h2>My Education</h2>
+                            <div class="institutes">
+                                <div class="institue">
+                                    <div data-year="2020-2022" class="institue__degree">BSC</div>
+                                    <div class="institue__program">Petroleum and Mining Engineering</div>
+                                    <div class="institue__name">military Institue of Science and Technology</div>
+                                    <div class="institue__description">Major in UI Design, UX Design, Interaction Design, User Empathy, Branding.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-experience">
+                            <h2>My Experience</h2>
+                            <div class="companies">
+                                <div class="company">
+                                    <div data-year="2020-2022" class="company__name">Behance</div>
+                                    <div class="company__post">Web designer</div>
+                                    <div class="company__location">Dhaka, Bangladesh</div>
+                                    <div class="company__description">After finishing my studies, I first concentrated on my work in Behance, here I worked as a web designer.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <h2>My Skills</h2>
+                            <p>As a designer I am constantly improving my <span class="color-secondary">skills</span> |</p>
+                            <div class="all-skill">
+                                <div class="skill">
+                                    <div class="skill__name">HTML :</div>
+                                    <div class="skill__progressbar">
+                                        <div style="width: 90%;" class="skill__progressbar__progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!---------------- end of resume section ------------------------>
         </main>
 
         <script src="./js/main.js"></script>
