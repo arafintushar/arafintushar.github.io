@@ -91,13 +91,27 @@ const skills = [
 
 const menu = document.querySelector(".menu");
 const sideBar = document.querySelector(".side-bar");
+const navLinks = document.querySelectorAll(".side-bar .nav-links .nav-link");
+
+menu.addEventListener("click", toggleMenu);
+navLinks.forEach((link) => {
+    link.addEventListener("click", activeNav);
+});
 
 function toggleMenu() {
     sideBar.classList.toggle("active-side-bar");
     menu.classList.toggle("open-side-bar");
 }
-
-menu.addEventListener("click", toggleMenu);
+function activeNav() {
+    navLinks.forEach((link) => {
+        link.classList.remove("active");
+    });
+    this.classList.add("active");
+    if (menu.classList.contains("open-side-bar")) {
+        sideBar.classList.toggle("active-side-bar");
+        menu.classList.toggle("open-side-bar");
+    }
+}
 
 /*******************************
     resume section
