@@ -1,0 +1,125 @@
+/*********************************************************
+    reset
+*********************************************************/
+:root {
+    --primary-color-b: #{$primaryColorBold};
+    --primary-color-m: #{$primaryColorMedium};
+    --primary-color-l: #{$primaryColorLight};
+    --secondary-color: #{$secondaryColor};
+    --neutral-color: #{$neutranColor};
+    --dark-color: #{$darkColor};
+    --muted-dark-color: #{$mutedDarkColor};
+    --nav-link-color: #{$navLinkColor};
+    --para-color: #{$paraColor};
+    --section-title-bg: #{$sectionTitleBg};
+    /* bg color*/
+    --bg-color-first: #{$bgColorFirst};
+    --bg-color-second: #{$bgColorSecond};
+    /* btn */
+    --btn-color: #{$btnColor};
+    --btn-radius: #{$btnRadius};
+    --btn-fill-color: #{$btnFillColor};
+    --btn-fill-bg-color: #{$btnFillBgColor};
+    /* font */
+    --f-weight-b: #{$fWeightBold};
+    --f-weight-m: #{$fWeightMedium};
+    --f-weight-n: #{$fWeightNormal};
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: var(--f-weight-n);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+    display: flex;
+    color: var(--neutral-color);
+}
+
+section {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    section {
+        padding-left: 6rem;
+    }
+}
+@media only screen and (min-width: 1450px) {
+    section {
+        padding-left: 25rem;
+    }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 4.8rem;
+    font-weight: var(--f-weight-b);
+    line-height: 1.2;
+}
+h2 {
+    font-size: 3.2rem;
+    font-weight: var(--f-weight-m);
+    line-height: 1.2;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: var(--f-weight-b);
+}
+
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 1.8rem;
+    }
+    h1 {
+        font-size: 6.4rem;
+    }
+    h2 {
+        font-size: 3.6rem;
+    }
+}
+
+/*********************************************************
+    end reset
+*********************************************************/
