@@ -83,6 +83,62 @@ const skills = [
     },
 ];
 
+const projects = [
+    {
+        id: 1,
+        type: "portfolio",
+        title: "portfolio",
+        link: "#",
+        img: "./img/project-1.jpg",
+        details:
+            "Here we replace text to project summury for give a small overview of project",
+    },
+    {
+        id: 2,
+        type: "portfolio",
+        title: "portfolio",
+        link: "#",
+        img: "./img/project-2.jpg",
+        details:
+            "Here we replace text to project summury for give a small overview of project",
+    },
+    {
+        id: 3,
+        type: "e-commerce",
+        title: "e-commerce",
+        link: "#",
+        img: "./img/project-3.jpg",
+        details:
+            "Here we replace text to project summury for give a small overview of project",
+    },
+    {
+        id: 4,
+        type: "others",
+        title: "other",
+        link: "#",
+        img: "./img/project-4.jpg",
+        details:
+            "Here we replace text to project summury for give a small overview of project",
+    },
+    {
+        id: 5,
+        type: "e-commerce",
+        title: "e-commerce",
+        link: "#",
+        img: "./img/project-5.jpg",
+        details:
+            "Here we replace text to project summury for give a small overview of project",
+    },
+    {
+        id: 6,
+        type: "portfolio",
+        title: "portfolio",
+        link: "#",
+        img: "./img/project-6.jpg",
+        details:
+            "Here we replace text to project summury for give a small overview of project",
+    },
+];
 /*==========================end of my file========================================*/
 
 /*******************************
@@ -166,3 +222,66 @@ let updateSkills = skills.map((skill) => {
 
 updateSkills = updateSkills.join("");
 mySkills.innerHTML = updateSkills;
+
+/*******************************
+    project section
+********************************/
+const projectBody = document.querySelector(".project-sec .projects");
+
+const projectBtns = document.querySelectorAll(
+    ".project-sec .project__btn-group .btn"
+);
+let loadProject;
+window.addEventListener("load", () => {
+    loadProject = projects;
+    loadProject = loadProject.map((project) => {
+        return `<a href="${project.link}" class="project" style="background-image: url('${project.img}')">
+        <div class="card">
+            <h4 class="card__title">${project.title}</h4>
+            <div class="card__details">${project.details}</div>
+        </div>
+    </a>`;
+    });
+    loadProject = loadProject.join("");
+    projectBody.innerHTML = loadProject;
+});
+
+projectBtns.forEach((btn) => {
+    btn.addEventListener("click", filterProjects);
+});
+
+function filterProjects(e) {
+    if (e.target.dataset.type === "all") {
+        projectBody.innerHTML = loadProject;
+    } else {
+        let filtertedProject;
+        filtertedProject = filtertedProject = projects.filter((project) => {
+            if (project.type === e.target.dataset.type) return project;
+        });
+        filtertedProject = filtertedProject.map((project) => {
+            return `<a href="${project.link}" class="project" style="background-image: url('${project.img}')">
+                <div class="card">
+                    <h4 class="card__title">${project.title}</h4>
+                    <div class="card__details">${project.details}</div>
+                </div>
+            </a>`;
+        });
+        filtertedProject = filtertedProject.join("");
+        projectBody.innerHTML = filtertedProject;
+    }
+
+    projectBtns.forEach((btn) => {
+        if (btn.classList.contains("active-project-btn")) {
+            btn.classList.remove("active-project-btn");
+        }
+    });
+    e.target.classList.add("active-project-btn");
+}
+
+/*******************************
+    footer section
+********************************/
+let currentYear = new Date();
+currentYear = currentYear.getFullYear();
+
+document.querySelector(".footer-year").innerHTML = currentYear;
