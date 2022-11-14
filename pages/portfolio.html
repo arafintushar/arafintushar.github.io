@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arafin Shahadat</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <div class="left-sec">
+            <div class="nav-wrapper">
+                <div class="logo">Arafin</div>
+                <nav class="primary-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="portfolio.html" class="nav-link active"
+                                >portfolio</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    <p class="muted-txt">
+                        <span class="current-year">&#169; 2022</span> Arafin
+                    </p>
+                    <p><span class="muted-txt">Created by</span> Arafin</p>
+                </div>
+                <button class="hamburger-menu">
+                    <div class="hamburger-menu__bar"></div>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="right-sec">
+            <section id="portfolio-sec">
+                <div class="container">
+                    <div class="section-heading">
+                        <div class="section-heading__titles">
+                            <h4 class="section-heading__title">portfolio</h4>
+                            <h2
+                                class="section-heading__sub-title | fs-secondary-heading fw-bold txt-neutral-800"
+                            >
+                                Creative Portfolio
+                            </h2>
+                        </div>
+                        <ul class="section-heading__portfolio-filters">
+                            <li>
+                                <button
+                                    class="filter-btn active"
+                                    data-type="all"
+                                >
+                                    All
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    class="filter-btn"
+                                    data-type="portfolio"
+                                >
+                                    Portfolio
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    class="filter-btn"
+                                    data-type="e-commerce"
+                                >
+                                    eCommerce
+                                </button>
+                            </li>
+                            <li>
+                                <button class="filter-btn" data-type="others">
+                                    Others
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="projects">
+                        <div class="project">
+                            <div
+                                class="project-img"
+                                style="
+                                    background-image: url('../images/project-1.jpg');
+                                "
+                            >
+                                <span class="sr-only">project image</span>
+                            </div>
+                            <div class="project-details">
+                                <h3 class="project-title | h3 fw-bold">
+                                    Portfolio website
+                                </h3>
+                                <div class="project-tech">
+                                    HTML, CSS, javaScript, Bootstrap
+                                </div>
+                                <a
+                                    href="https://arafintushar.github.io/"
+                                    target="_blank"
+                                    class="project-prev"
+                                    >Live preview</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="../js/main.js"></script>
+        <script src="../js/portfolio.js"></script>
+    </body>
+</html>
